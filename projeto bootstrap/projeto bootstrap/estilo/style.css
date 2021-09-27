@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+/*---Reset---*/
+*{
+   margin: 0;
+   padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+.padding{
+    padding-bottom: 2rem;
+}
+.welcome{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.welcome hr{
+    border-top: 2px solid rgb(3, 201, 3);
+    width: 95%;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+/*---Naveção---*/
+#brand{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid rgb(0, 255, 0);
+    margin: 10px;
+    cursor: pointer;
+}
+.navbar{
+    font-size: 16px; 
+    top:0 ;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-light .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active{
+    color: rgb(0, 255, 0);
+}
+.navbar i{
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    font-weight: 500px;
+    transition: 0.3s ease;
+}
+.navbar i:hover{
+    color: rgb(0, 255, 0);
+}
+/*-----------------------------------Mobile Nav-------------------------------------*/
+.navbar-light .navbar-toggler{
+    border: none;
+    outline: none;
+}
+.nav-icon{
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+.nav-icon:hover{
+    color: rgb(0, 255, 0);
+}
+#bar{
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: black;
+}
+#bar:hover{
+    color: #fff;
+}
+@media only screen and (max-width: 991px){
+    body > nav > div > button:hover,
+    body > nav > div > button:focus{
+        background-color: rgb(0, 255, 0);
+    }
+    body > nav > div > button:hover #bar,
+    body > nav > div > button:focus #bar{
+        color: #FFF;
+    }
+    #navbarSupportedContent > ul{
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+    }
+    #navbarSupportedContent > ul > li:nth-child(n) > a{
+        padding: 10px 20px;
+    } 
+}
+/*-------------------*/
+.carrosel-banner-img{
+    width: 1270px;
+    height: 680px;
+}
+.carousel-caption h1{
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.carousel-caption h3{
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.btn-primary{
+    color: rgb(0, 202, 0);
+    background-color: #fff;
+    border: 1px solid rgb(0, 202, 0);
+    transition: 0.5s;
+}
+.btn-primary:hover{
+    background-color: rgb(0, 202, 0);
+    border: 1px solid #fff;
+}
+.jumbotron{
+    padding: 1rem;
+    border-radius: 0;
+}
+.fa-code{
+    color: #e54d26;
+}
+.fa-bold{
+    color: #563d7c;
+}
+.fa-css3{
+    color: #2163af;
+}
+.fa-code, .fa-bold, .fa-css3{
+    font-size: 4em;
+    margin: 1rem;
+}
+.social a{
+    font-size: 4.5rem;
+    padding: 3rem;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter{
+    color: #00aced;
+}
+.fa-google-plus-g{
+    color: #dd4b39;
+}
+.fa-instagram{
+    color: #517fa4;
+}
+.fa-youtube{
+    color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover{
+    color: #d5d5d5;
+}
+footer{
+    background-color: #161616;
+    color: #fff;
+    padding-top: 2rem;
+}
+hr.light{
+    border-top: 1px solid #fff;
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+/*---Media Queries---*/
+@media (max-width: 992px){
+
+}
+@media (max-width: 768px){
+
+}
+@media (max-width: 576px){
+
+}
+
+
+/*---Bug do Firefox---*/
+.carousel-item{
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+/*---Bug Imagem de Background---*/
+figure{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin: 0!important;
+}
+.fixed-wrap{
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#fixed{
+    background-image: url("../imagens/foto2.jpg");
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;        
+}
+/*---Gug Paddind do Bootstrap---*/
+[class*="col-"]{
+    padding: 1rem;
+}
