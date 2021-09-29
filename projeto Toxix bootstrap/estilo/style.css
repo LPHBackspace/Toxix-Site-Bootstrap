@@ -126,19 +126,172 @@ html, body{
     padding: 1rem;
     border-radius: 0;
 }
-.fa-code{
-    color: #e54d26;
+/*-------------------*/
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-.fa-bold{
-    color: #563d7c;
+.single_product{
+    position: relative;
+    padding: 30px;
 }
-.fa-css3{
-    color: #2163af;
+.single_product .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
 }
-.fa-code, .fa-bold, .fa-css3{
-    font-size: 4em;
-    margin: 1rem;
+.single_product .card:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
 }
+.single_product .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.single_product .card:after{
+    content:'Skate';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.04);
+}
+.single_product .card .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.single_product .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+}
+.single_product .card .imgBx img{
+    height: 100px;
+    width: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 270px;
+}
+.single_product .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.single_product .card:hover .contentBx{
+    height: 210px;
+}
+.single_product .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.single_product .card .contentBx .size,
+.single_product .card .contentBx .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.single_product .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.single_product .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.single_product .card .contentBx .size h3,
+.single_product .card .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.single_product .card .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.single_product .card .contentBx .size span:hover{
+    background: #9bdc28;
+}
+.single_product .card .contentBx .color span{
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.single_product .card .contentBx .color span:nth-child(2){
+    background: #9bdc28;
+}
+.single_product .card .contentBx .color span:nth-child(3){
+    background: #03a9f4;
+}
+.single_product .card .contentBx .color span:nth-child(4){
+    background: #e91e63;
+}
+.single_product .card .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translate(50px);
+    transition: 0.5s;
+}
+.single_product .card:hover .contentBx a{
+    opacity: 1;
+    transform: translate(0px);
+    transition-delay: 0.75s;
+}
+/*-------------------*/
 .social a{
     font-size: 4.5rem;
     padding: 3rem;
@@ -213,7 +366,7 @@ figure{
     height: 100%;
 }
 #fixed{
-    background-image: url("../imagens/foto2.jpg");
+    background-image: url("../imagens/skate6.jpg");
     position: fixed;
     display: block;
     top: 0;
