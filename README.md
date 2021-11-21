@@ -1,5 +1,5 @@
 # Toxix-Site-Bootstrap
-Site E-comerce desenvolvido com
+Site E-comerce de skates desenvolvido com
 - HTML
 - CSS
 - JavaScript
